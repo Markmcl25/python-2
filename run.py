@@ -18,11 +18,11 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 # Open the Google Sheet by name
 SHEET = GSPREAD_CLIENT.open('python-2')
 
-# Access the first worksheet (input)
+# Access the first worksheet (sheet 1)
 worksheet = SHEET.get_worksheet(0)
 
-# Function to relay text data back to the sheet
-def relay_data_to_sheet(name, email, message):
+# Function to add data to the sheet
+def add_data_to_sheet(name, email, message):
     """
     Appends a row with the given name, email, and message to the Google Sheet.
 
@@ -33,11 +33,12 @@ def relay_data_to_sheet(name, email, message):
     """
     worksheet.append_row([name, email, message])
 
-# Example usage
-name_to_relay = "John Doe"
-email_to_relay = "john.doe@example.com"
-message_to_relay = "This is a test message to be relayed back to the Google Sheet."
-relay_data_to_sheet(name_to_relay, email_to_relay, message_to_relay)
-print("Data relayed successfully.")
+# Get input from the user
+name = input("Enter your name: ")
+email = input("Enter your email: ")
+message = input("Enter your message: ")
 
-print("gspread and google-auth are installed and imported successfully.")
+# Add data to the sheet
+add_data_to_sheet(name, email, message)
+
+print("Data added successfully.")

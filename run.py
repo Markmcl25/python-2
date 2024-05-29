@@ -34,6 +34,12 @@ def add_data_to_sheet(name, email, message):
     """
     worksheet.append_row([name, email, message])
 
+    # Function to view data
+def view_data():
+    rows = worksheet.get_all_records()
+    for row in rows:
+        print(row)
+
 # Check if running on Heroku
 if 'DYNO' in os.environ:
     # Running on Heroku (web environment)

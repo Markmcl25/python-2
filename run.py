@@ -18,7 +18,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 # Open the Google Sheet by name
 SHEET = GSPREAD_CLIENT.open('python-2')
 
-# Access the first worksheet (sheet 1)
+# Access the first worksheet (input)
 worksheet = SHEET.get_worksheet(0)
 
 # Function to relay text data back to the sheet
@@ -34,6 +34,8 @@ def relay_data_to_sheet(name, email, message):
     worksheet.append_row([name, email, message])
 
 # Example usage
-text_to_relay = "This is a test message to be relayed back to the Google Sheet."
-relay_text_to_sheet(text_to_relay)
-print("Text relayed successfully.")
+name_to_relay = "John Doe"
+email_to_relay = "john.doe@example.com"
+message_to_relay = "This is a test message to be relayed back to the Google Sheet."
+relay_data_to_sheet(name_to_relay, email_to_relay, message_to_relay)
+print("Data relayed successfully.")

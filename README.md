@@ -1,5 +1,6 @@
 # Google Sheets Command-Line Data Manager
 
+
 ## Project Description
 
 The Google Sheets Command-Line Data Manager is a simple yet powerful application designed to help users manage data in a Google Sheet through a command-line interface (CLI). This project leverages Python and the `gspread` library to interact with Google Sheets, making it easy to add and view data without needing to open a web browser.
@@ -14,6 +15,7 @@ This project is particularly useful for small teams or individuals who need to c
 - **Event Registrations**: Collect names, emails, and messages from participants.
 - **Feedback Collection**: Gather feedback from users or customers in a centralized sheet.
 - **Data Logging**: Maintain a log of entries for various purposes such as meeting notes, daily logs, or inventory records.
+
 
 ## Features
 
@@ -33,3 +35,22 @@ This project is particularly useful for small teams or individuals who need to c
    ```bash
    git clone https://github.com/yourusername/google-sheets-cli-manager.git
    cd google-sheets-cli-manager
+
+2. **Install Dependencies**
+
+    ```bash  
+    pip install gspread google-auth
+
+3.  **Set Up Google API Credentials**   
+
+- Create a project in the Google Cloud Console.
+- Enable the Google Sheets API and Google Drive API.
+- Create service account credentials and download the JSON key file.
+- Save the JSON key file as creds.json in the project directory.
+
+4.  **Configure Google Sheet**
+
+- Share your Google Sheet with the service account email found in your creds.json file.
+- Update the SHEET_NAME in the code to match your Google Sheet's name.
+
+## Usage

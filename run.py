@@ -33,14 +33,18 @@ def add_data_to_sheet(name, email, message):
     """
     worksheet.append_row([name, email, message])
 
-    print("Please enter information .")
-
-# Get input from the user
-name = input("Enter your name: ")
-email = input("Enter your email: ")
-message = input("Enter your message: ")
-
-# Add data to the sheet
-add_data_to_sheet(name, email, message)
-
-print("Data added successfully.")
+# Check if running on Heroku
+if 'DYNO' in os.environ:
+    # Running on Heroku (web environment)
+    name = input("Enter your name: ")
+    email = input("Enter your email: ")
+    message = input("Enter your message: ")
+    add_data_to_sheet(name, email, message)
+    print("Data added successfully.")
+else:
+    # Running locally (terminal environment)
+    name = input("Enter your name: ")
+    email = input("Enter your email: ")
+    message = input("Enter your message: ")
+    add_data_to_sheet(name, email, message)
+    print("Data added successfully.")

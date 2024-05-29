@@ -1,31 +1,35 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Google Sheets Command-Line Data Manager
 
-Welcome Mark Mcloughlin,
+## Project Description
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The Google Sheets Command-Line Data Manager is a simple yet powerful application designed to help users manage data in a Google Sheet through a command-line interface (CLI). This project leverages Python and the `gspread` library to interact with Google Sheets, making it easy to add and view data without needing to open a web browser.
 
-## Reminders
+### Key Features:
+- **Add Data**: Users can input their name, email, and a message, which will then be appended as a new row in the Google Sheet.
+- **View Data**: Users can view all existing entries in the Google Sheet, displayed directly in the terminal.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+This project is particularly useful for small teams or individuals who need to collect and review data in a structured format but prefer the simplicity and speed of a command-line tool. It can be deployed locally or on cloud platforms like Heroku, making it accessible from anywhere with internet access.
 
-## Creating the Heroku app
+### Use Cases:
+- **Event Registrations**: Collect names, emails, and messages from participants.
+- **Feedback Collection**: Gather feedback from users or customers in a centralized sheet.
+- **Data Logging**: Maintain a log of entries for various purposes such as meeting notes, daily logs, or inventory records.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Features
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- **Add Data**: Users can add new entries with their name, email, and a message.
+- **View Data**: Users can view all existing entries in the Google Sheet.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Requirements
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- Python 3.x
+- `gspread` library
+- `google-auth` library
 
-Connect your GitHub repository and deploy as normal.
+## Setup
 
-## Constraints
+1. **Clone the Repository**
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+   ```bash
+   git clone https://github.com/yourusername/google-sheets-cli-manager.git
+   cd google-sheets-cli-manager

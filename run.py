@@ -34,24 +34,28 @@ def add_data_to_sheet(name, email, message):
     """
     worksheet.append_row([name, email, message])
 
-    # Function to view data
+# Function to view data
 def view_data():
     rows = worksheet.get_all_records()
     for row in rows:
         print(row)
 
-# Check if running on Heroku
-if 'DYNO' in os.environ:
-    # Running on Heroku (web environment)
-    name = input("Enter your name: ")
-    email = input("Enter your email: ")
-    message = input("Enter your message: ")
-    add_data_to_sheet(name, email, message)
-    print("Data added successfully.")
-else:
-    # Running locally (terminal environment)
-    name = input("Enter your name: ")
-    email = input("Enter your email: ")
-    message = input("Enter your message: ")
-    add_data_to_sheet(name, email, message)
-    print("Data added successfully.")
+# Main function to handle user input
+def main():
+    while True:
+        print("Options: add, view, quit")
+        choice = input("Enter your choice: ").strip().lower()
+        if choice == 'add':
+            name = input("Enter your name: ")
+            email = input("Enter your email: ")
+            message = input("Enter your message: ")
+            add_data_to_sheet(name, email, message)
+        elif choice == 'view':
+            view_data()
+        elif choice == 'quit':
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()

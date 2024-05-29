@@ -33,6 +33,8 @@ def add_data_to_sheet(name, email, message):
     """
     worksheet.append_row([name, email, message])
 
+    print("Please enter information .")
+
 # Get input from the user
 name = input("Enter your name: ")
 email = input("Enter your email: ")

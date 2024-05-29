@@ -39,3 +39,5 @@ email_to_relay = "john.doe@example.com"
 message_to_relay = "This is a test message to be relayed back to the Google Sheet."
 relay_data_to_sheet(name_to_relay, email_to_relay, message_to_relay)
 print("Data relayed successfully.")
+
+print("gspread and google-auth are installed and imported successfully.")

@@ -24,7 +24,7 @@ This project is particularly useful for small teams or individuals who need to c
 - **Add Data**: Users can add new entries with their name, email, and a message.
 - **View Data**: Users can view all existing entries in the Google Sheet.
 
-![python-readme2](images/python-readme2.png)
+![python-readme2](images/python-readme2.png) ![python-sheet](images/python-sheet.png)
 
 ## Requirements
 

@@ -109,3 +109,11 @@ This project was deployed using the code institutes mock terminal for Heroku.
 - Link the Heroku app to the repository
 - Click on Deploy
 
+Deployed link - https://python-2-2d45319455bf.herokuapp.com/
+Google sheet link - https://docs.google.com/spreadsheets/d/1atkkaaP6NbK2gPLHcnCnkdEFDLtPW9zbTBbhv19tBc8/edit?usp=sharing
+
+## Credits
+
+- Code Institute for the deployment terminal
+
+

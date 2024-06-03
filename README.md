@@ -1,9 +1,11 @@
-# Google Sheets Command-Line Data Manager
+# Command-Line Data Manager
 
 
 ## Project Description
 
 The Google Sheets Command-Line Data Manager is a simple yet powerful application designed to help users manage data in a Google Sheet through a command-line interface (CLI). This project leverages Python and the `gspread` library to interact with Google Sheets, making it easy to add and view data without needing to open a web browser.
+
+![python-readme1.png](images/python-readme1.png)
 
 ### Key Features:
 - **Add Data**: Users can input their name, email, and a message, which will then be appended as a new row in the Google Sheet.
@@ -22,6 +24,8 @@ This project is particularly useful for small teams or individuals who need to c
 - **Add Data**: Users can add new entries with their name, email, and a message.
 - **View Data**: Users can view all existing entries in the Google Sheet.
 
+![python-readme2](images/python-readme2.png)
+
 ## Requirements
 
 - Python 3.x
@@ -33,7 +37,7 @@ This project is particularly useful for small teams or individuals who need to c
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/google-sheets-cli-manager.git
+   git clone https://github.com/Markmcl25/google-sheets-cli-manager.git
    cd google-sheets-cli-manager
 
 2. **Install Dependencies**
@@ -75,7 +79,33 @@ Data added successfully.
 Options: add, view, quit
 Enter your choice: view
 {'name': 'John Doe', 'email': 'john.doe@example.com', 'message': 'Hello, this is a test message.'}
-
-
+````
 
 ## Bug Fixes
+
+- **Fixed Authentication Errors:** Ensured the correct scope and service account permissions to prevent authentication errors.
+- **Handled Empty Inputs:** Added validation to check for empty inputs when adding data to prevent incomplete rows.
+- **Improved Error Messages:** Enhanced error handling to provide more informative error messages when operations fail.
+- **Data Display Formatting:** Improved the format of data displayed in the terminal for better readability.
+- **Connection Handling:** Implemented better handling for network issues to retry operations or fail gracefully with a clear message.
+
+
+## Testing
+
+No major issues on https://www.pythonchecker.com/
+
+![python-checker](images/python-checker.png)
+
+
+## Deployment
+
+This project was deployed using the code institutes mock terminal for Heroku.
+
+**Steps for deployment:**
+
+- Fork or clone repository
+- Create new Heroku app
+- Set the buildbacks to Python and NodeJS in that order
+- Link the Heroku app to the repository
+- Click on Deploy
+

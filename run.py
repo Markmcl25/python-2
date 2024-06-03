@@ -23,6 +23,7 @@ SHEET = GSPREAD_CLIENT.open('python-2')
 worksheet = SHEET.get_worksheet(0)
 
 # Function to add data to the sheet
+
 def add_data_to_sheet(name, email, message):
     """
     Appends a row with the given name, email, and message to the Google Sheet.
@@ -35,12 +36,14 @@ def add_data_to_sheet(name, email, message):
     worksheet.append_row([name, email, message])
 
 # Function to view data
+
 def view_data():
     rows = worksheet.get_all_records()
     for row in rows:
         print(row)
 
 # Main function to handle user input
+
 def main():
     while True:
         print("Options: add, view, quit")

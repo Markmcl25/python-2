@@ -24,8 +24,10 @@ This project is particularly useful for small teams or individuals who need to c
 - **Add Data**: Users can add new entries with their name, email, and a message.
 - **View Data**: Users can view all existing entries in the Google Sheet.
 
-![python-readme2](images/python-readme2.png) ![python-sheet](images/python-sheet.png)
-
+<div style="display: flex;">
+    <img src="images/python-readme2.png" alt="Python Readme 2" style="width: 50%;">
+    <img src="images/python-sheet.png" alt="Python Sheet" style="width: 50%;">
+</div>
 ## Requirements
 
 - Python 3.x

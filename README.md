@@ -53,7 +53,7 @@ This project is particularly useful for small teams or individuals who need to c
 - Share your Google Sheet with the service account email found in your creds.json file.
 - Update the SHEET_NAME in the code to match your Google Sheet's name.
 
- ## Usage
+## Usage
 
 Run the application using Python:
 - python run.py
@@ -75,3 +75,7 @@ Data added successfully.
 Options: add, view, quit
 Enter your choice: view
 {'name': 'John Doe', 'email': 'john.doe@example.com', 'message': 'Hello, this is a test message.'}
+
+
+
+## Bug Fixes
